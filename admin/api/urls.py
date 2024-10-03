@@ -14,7 +14,4 @@ urlpatterns = [
     path('todo/create/', CreateTask.as_view(), name='todo-create'),
     path('todo/update/<int:pk>/', UpdateTask.as_view(), name='todo-update'),
     path('todo/delete/<int:pk>/', DeleteTodo.as_view(), name='todo-delete'),
-
-    # Generate jwt tokens endpoints
-    path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
 ]
