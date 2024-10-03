@@ -1,0 +1,7 @@
+<h1> Todo Forms</h1>
+<button><a href="{% url 'todo' %}">Return</a></button>
+<form method="POST" action="">
+    {% csrf_token %} <!-- protect from cross site forgery attacks-->
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form>

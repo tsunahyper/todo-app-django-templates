@@ -1,0 +1,7 @@
+<a href="{% url 'todo' %}">Return</a>
+<a href="{%  url 'todo' %}"></a>
+<form method="POST">
+    {% csrf_token %} <!-- protect from cross site forgery attacks-->
+    <p>Are you sure on deleting this task? "{{todo}}"</p>
+    <input type="submit" value="Delete"/>
+</form>

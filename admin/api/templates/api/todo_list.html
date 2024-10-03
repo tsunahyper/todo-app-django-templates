@@ -1,0 +1,45 @@
+{%  if request.user.is_authenticated %}
+    <p>{{request.user}} is logged in !</p>
+    <form id="logout-form" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Log Out</button>
+    </form>
+{% else %}
+    <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+<hr>
+<h1>{{user}} Todo List</h1>
+<button><a href="{% url 'todo-create' %}">Add Item</a></button>
+<p></p>
+<form method="GET" action="">
+    <input type="text" name="search-area" value="{{search_input}}">
+    <input type="submit" value="Search">
+</form>
+<table>
+    <tr>
+        <th>
+            Item
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for do in todo %}
+    <tr>
+        <td>
+            {{do.title}}
+        </td>
+        <td>
+            <a href="{% url 'todo-detail' do.id %}">View</a>
+        </td>
+        <td>
+            <a href="{% url 'todo-update' do.id %}">Edit</a>
+        </td>
+        <td>
+            <a href="{% url 'todo-delete' do.id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <h3>No Item in List</h3>
+    {% endfor %}
+</table>
