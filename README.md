@@ -68,7 +68,27 @@ This is a **Todo App** built using **Django** with a simple HTML interface for m
 - The HTML interface is rendered using **Django templates**. Basic Django forms are used to handle user inputs, such as registering users, logging in, and creating/updating/deleting tasks.
 - Each view is associated with a template that renders the corresponding page, making it easy to customize and extend the user interface if needed.
 
-How to Run the App
+## Screenshots
+
+1. **Login Page**  
+   ![Login Page](img_ss/login_page.png)
+
+2. **Register Page**  
+   ![Register Page](img_ss/register_page.png)
+
+3. **Todo List View**  
+   ![Todo List](img_ss/todo_list.png)
+
+4. **Add New Todo**  
+   ![Add Todo](img_ss/add_todo.png)
+
+5. **Update Todo**  
+   ![Update Todo](img_ss/update_todo.png)
+
+6. **Delete Todo**  
+   ![Delete Todo](img_ss/delete_todo.png)
+
+## How to Run the App
 
 1.	Clone the repository to your local machine:
   ```bash
